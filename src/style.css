@@ -1,0 +1,130 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+body{
+    background-image: url(https://i.gifer.com/68g.gif);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    background-color: #111;
+}
+
+.text{
+    user-select: none;
+    color: #afafaf;
+    font-family: 'Quicksand', sans-serif;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.sun{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: linear-gradient(#fffb00,#ffbb00);
+    animation: spin 30s linear infinite;
+    animation: blink 1s alternate infinite;
+}
+
+.earth-orbit{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dotted rgba(255, 255, 255, 0.137);
+    border-radius: 50%;
+    animation: orbit-earth 11s linear infinite;
+}
+
+
+.earth{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-image: linear-gradient(#168300,#0066ff);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
+}
+
+.moon-orbit {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px dotted rgba(255, 255, 255, 0.137);
+    animation: orbit-moon 8s linear infinite;
+}
+
+.moon {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(232, 247, 255, 0.74);
+}
+
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbit-earth {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes orbit-moon {
+    0% {
+    
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+       
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes blink {
+    0%{
+        box-shadow: 1px 1px 17px #ffbb00;
+    }
+    100%{
+        box-shadow: 3px 3px 50px #ffbb00;
+    }
+}
+
